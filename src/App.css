@@ -1,0 +1,124 @@
+body {
+    background-color: #f5f4f6;
+    margin: 0px;
+    min-height: 100vh;
+}
+
+header section {
+
+    padding: 10px 30px;
+
+}
+
+header section>div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: fit-content;
+
+}
+
+header section h1 {
+    padding-left: 1rem;
+    color: #597008;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 201px);
+}
+
+main #navbar {
+    padding: 20px 20px 20px 0px;
+}
+
+main #hrnet-content {
+    padding: 20px;
+}
+
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    min-width: 195px;
+}
+
+#navbar .menuitem {
+    cursor: pointer;
+    width: 100%;
+    line-height: 2rem;
+    font-size: 0.95rem;
+}
+
+#navbar .menuitem {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+#navbar .menuitem::before {
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 2rem;
+    background-color: #a3aa8d;
+    transition: ease width 200ms;
+}
+
+#navbar .menuitem.active::before {
+    background-color: #597008;
+    width: 12px;
+}
+
+#navbar .menuitem span {
+    padding-left: 5px;
+    color: #4e5048;
+}
+
+#navbar .menuitem.active span {
+    color: #597008;
+    font-weight: 600;
+}
+
+#navbar .menuitem:hover::before {
+    width: 12px;
+}
+
+#hrnet-content {
+    flex-grow: 1;
+
+}
+
+#hrnet-content .content-layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.content-wrapper {
+    background-color: white;
+    width: fit-content;
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+
+
+footer {
+    text-align: center;
+    color: #9d9ca0;
+    padding: 45px 0px 15px 0px;
+    font-size: 0.8rem;
+}
+
+.content-wrapper h2 {
+    color: #597008;
+    margin-bottom: 2rem;
+    text-align: center;
+}

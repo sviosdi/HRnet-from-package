@@ -1,0 +1,83 @@
+.sl-singlemodal-wrapper {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 200ms opacity;
+    visibility: hidden;
+    background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%)
+}
+
+.sl-singlemodal-wrapper.opened {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sl-singlemodal {
+    /* visibility: hidden;*/
+    border-radius: 6px;
+    box-shadow: 0 6px 15px 0 #00000080;
+    box-sizing: border-box;
+    background: white;
+}
+
+
+.sl-singlemodal-header {
+    border-radius: 6px 6px 0px 0px;
+    display: flex;
+    font-size: 1.3em;
+
+    justify-content: flex-end;
+    height: 22px;
+    padding: 5px 8px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.sl-singlemodal-close-btn {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: solid 1px transparent;
+    box-sizing: border-box;
+    user-select: none;
+
+}
+
+.sl-singlemodal-close-btn>svg {
+    fill: #666;
+    width: 15px;
+    height: 15px;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+
+.sl-singlemodal-close-btn:hover {
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    fill: #222;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 100%);
+}
+
+.sl-singlemodal-close-btn:active {
+    box-shadow: inset 0 0 1px #555;
+    background: #f1f2f5;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 100%);
+}
+
+.sl-singlemodal-content {
+    padding: 20px 55px 25px 30px;
+    color: #323b0e;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
